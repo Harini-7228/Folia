@@ -1,0 +1,24 @@
+# OS & editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Environment & secrets
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.*
+config.secret.*
+credentials.*
+api_keys.*
+
+# Local config with real API key (copy config.example.js → config.js and add your key)
+js/config.js

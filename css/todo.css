@@ -1,0 +1,9 @@
+.todo{max-width:720px}
+.todo__form{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.todo__form input{flex:1 1 240px;font:inherit;padding:.65rem .8rem;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+.todo__filters{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem}
+.todo__filters .btn{padding:.35rem .9rem}.todo__count{margin:0 0 0 auto;color:var(--muted)}
+.todo__list{list-style:none;margin:0;padding:0}
+.todo__item{display:flex;align-items:center;gap:.6rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.todo__item span{flex:1}.todo__item .btn{padding:.25rem .8rem;font-size:.85rem}
+.todo__item.is-done span{text-decoration:line-through;color:var(--muted)}

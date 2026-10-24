@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant care by weather | Folia</title>
+  <meta name="description" content="Check today's weather in your city and get a simple plant care tip from Folia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/weather.css">
+  <meta name="author" content="Folia">
+  <meta name="keywords" content="indoor plants, home decor, pots, planters, plant care, buy plants online">
+  <meta name="theme-color" content="#1F4D3A">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Folia">
+  <meta property="og:title" content="Plant care by weather | Folia">
+  <meta property="og:description" content="Check today's weather in your city and get a simple plant care tip from Folia.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Folia home"><span class="logo__name">Folia</span><span class="logo__sub">Plants &amp; home decor</span></a>
+    <nav class="nav" id="nav" aria-label="Main navigation"><ul class="nav__list"><li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link" href="services.html">Services</a></li><li><a class="nav__link" href="contact.html">Contact</a></li><li><a class="nav__link nav__link--active" href="weather.html" aria-current="page">Plant weather</a></li><li><a class="nav__link" href="todo.html">Reminders</a></li></ul></nav>
+    <div class="header__actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode">Dark</button>
+      <button class="icon-btn" id="wishlist-btn" type="button" aria-label="Wishlist">Wishlist <span class="badge" id="wishlist-count">0</span></button>
+      <button class="icon-btn" id="cart-btn" type="button" aria-label="Cart">Cart <span class="badge" id="cart-count">0</span></button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero"><div class="container"><h1>Plant care by weather</h1><p>Enter your city and get an instant watering tip for today's conditions.</p></div></section>
+
+  <!-- Live Search & Results -->
+  <section class="weather-live-section container">
+    <form id="weather-form" class="weather__form" novalidate>
+      <div class="weather__search-wrap">
+        <span class="weather__search-icon">📍</span>
+        <input id="city" name="city" type="text" class="weather__search-input" placeholder="Enter a city — e.g. Chennai, Mumbai, Delhi" autocomplete="off" aria-label="City name">
+        <button class="btn btn--primary weather__search-btn" type="submit">Check weather</button>
+      </div>
+    </form>
+    <div id="weather-msg" class="weather__msg-container" role="status" aria-live="polite" hidden></div>
+
+    <!-- Result card -->
+    <article id="weather-card" class="weather__card" hidden>
+      <div class="weather__card-top">
+        <div class="weather__location">
+          <img id="w-icon" class="weather__icon-img" width="56" height="56" alt="">
+          <div>
+            <h2 id="w-city" class="weather__city"></h2>
+            <p class="weather__condition" id="w-condition"></p>
+          </div>
+        </div>
+      </div>
+      <div class="weather__stats">
+        <div class="weather__stat">
+          <span class="weather__stat-icon">🌡️</span>
+          <span class="weather__num" id="w-temp"></span>
+          <span class="weather__stat-label">Temperature</span>
+        </div>
+        <div class="weather__stat">
+          <span class="weather__stat-icon">💧</span>
+          <span class="weather__num" id="w-humidity"></span>
+          <span class="weather__stat-label">Humidity</span>
+        </div>
+        <div class="weather__stat">
+          <span class="weather__stat-icon">💨</span>
+          <span class="weather__num" id="w-wind"></span>
+          <span class="weather__stat-label">Wind speed</span>
+        </div>
+      </div>
+      <div class="weather__tip-wrap">
+        <span class="weather__tip-badge">🌱 Plant care tip</span>
+        <p class="weather__tip" id="w-tip"></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- General watering guide (Next viewport) -->
+  <section class="weather__guide-section">
+    <div class="container">
+      <div class="weather__guide-header">
+        <h2 class="section__title text-center">General watering guide</h2>
+        <p class="weather__guide-sub text-center">Quick rules of thumb to keep your indoor and outdoor foliage thriving in any season.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="weather__guide-card">
+          <span class="weather__guide-icon">☀️</span>
+          <h3>Hot &amp; Sunny</h3>
+          <p>Water in the evening. Keep plants out of harsh afternoon sun and mist leaves.</p>
+        </article>
+        <article class="weather__guide-card">
+          <span class="weather__guide-icon">🌧️</span>
+          <h3>Rainy Days</h3>
+          <p>Skip watering. Ensure pots have drainage holes so roots don't sit in water.</p>
+        </article>
+        <article class="weather__guide-card">
+          <span class="weather__guide-icon">❄️</span>
+          <h3>Cold &amp; Cool</h3>
+          <p>Water less frequently. Keep plants away from cold windows and drafts.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div><p class="footer__brand">Folia</p><p>Easy-care plants, pots and decor, delivered to your door.</p></div>
+    <div><h2 class="footer__title">Explore</h2><ul class="footer__list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h2 class="footer__title">Visit us</h2><p>12 Garden Road, Bengaluru<br>Mon to Sat, 9 am to 7 pm<br>+91 90000 00000<br>hello@folia.example</p></div>
+  </div>
+  <p class="footer__copy">&copy; 2026 Folia Plants &amp; Home Decor. All rights reserved. Made with 🌿 for plant lovers.</p>
+</footer>
+<button class="back-top" id="back-top" type="button" aria-label="Back to top" hidden>&uarr;</button>
+<dialog id="quick-dialog" aria-labelledby="q-title"><div class="dialog__box"><button class="dialog__close" type="button" data-close aria-label="Close">&times;</button>
+  <h2 id="q-title"></h2><p id="q-desc"></p>
+  <ul class="facts"><li>Price: <strong id="q-price"></strong></li><li>Light: <span id="q-light"></span></li><li>Water: <span id="q-water"></span></li></ul>
+  <button class="btn btn--primary" id="q-add" type="button">Add to cart</button></div></dialog>
+<dialog id="panel-dialog" aria-labelledby="panel-title"><div class="dialog__box"><button class="dialog__close" type="button" data-close aria-label="Close">&times;</button>
+  <h2 id="panel-title"></h2><ul class="list" id="panel-list"></ul>
+  <a class="btn btn--primary" id="panel-cta" href="contact.html#plants">Send enquiry</a></div></dialog>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

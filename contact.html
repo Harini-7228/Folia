@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Folia | Send an enquiry</title>
+  <meta name="description" content="Ask about a plant, place an enquiry or visit the Folia store.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <meta name="author" content="Folia">
+  <meta name="keywords" content="indoor plants, home decor, pots, planters, plant care, buy plants online">
+  <meta name="theme-color" content="#1F4D3A">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Folia">
+  <meta property="og:title" content="Contact Folia | Send an enquiry">
+  <meta property="og:description" content="Ask about a plant, place an enquiry or visit the Folia store.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Folia home"><span class="logo__name">Folia</span><span class="logo__sub">Plants &amp; home decor</span></a>
+    <nav class="nav" id="nav" aria-label="Main navigation"><ul class="nav__list"><li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link" href="services.html">Services</a></li><li><a class="nav__link nav__link--active" href="contact.html" aria-current="page">Contact</a></li><li><a class="nav__link" href="weather.html">Plant weather</a></li><li><a class="nav__link" href="todo.html">Reminders</a></li></ul></nav>
+    <div class="header__actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode">Dark</button>
+      <button class="icon-btn" id="wishlist-btn" type="button" aria-label="Wishlist">Wishlist <span class="badge" id="wishlist-count">0</span></button>
+      <button class="icon-btn" id="cart-btn" type="button" aria-label="Cart">Cart <span class="badge" id="cart-count">0</span></button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero"><div class="container"><h1>Send an enquiry</h1><p>Tell us which plants, pots or decor you need and we will call you to confirm.</p></div></section>
+  <section class="contact-section container contact">
+    <form class="form" action="#" method="post" novalidate>
+      <div class="form-row">
+        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required><p class="field__error" aria-live="polite"></p></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><p class="field__error" aria-live="polite"></p></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required><p class="field__error" aria-live="polite"></p></div>
+        <div class="field">
+          <label for="category">Looking for</label>
+          <select id="category" name="category">
+            <option value="plants-pots">Plants + Matching Pots</option>
+            <option value="plants-only">Plants only</option>
+            <option value="pots-only">Ceramic &amp; Terracotta Pots</option>
+            <option value="decor">Home Decor (Stands, Macrame, Misters)</option>
+            <option value="custom">Full Room / Balcony Styling</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="plants">Plants, pots or decor items</label><input id="plants" name="plants" type="text" placeholder="e.g. Monstera with Terrazzo Pot, Brass Stand"></div>
+        <div class="field">
+          <label for="pot-finish">Preferred pot / planter style</label>
+          <select id="pot-finish" name="pot_finish">
+            <option value="any">Open to recommendation</option>
+            <option value="ceramic">Glazed Ceramic Pot</option>
+            <option value="terracotta">Classic Clay Terracotta</option>
+            <option value="metal">Metal / Brass Planter Stand</option>
+            <option value="macrame">Macrame Hanging Planter</option>
+            <option value="none">No pot (Nursery pot only)</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="message">Message &amp; notes</label><textarea id="message" name="message" rows="2" placeholder="Tell us about your room lighting, space or custom preferences..."></textarea></div>
+      <button class="btn btn--primary" type="submit">Send enquiry</button>
+    </form>
+    <aside class="contact__info">
+      <h2>Visit the store</h2>
+      <p class="contact__meta">12 Garden Road, Bengaluru &bull; Mon to Sat, 9 am to 7 pm<br>+91 90000 00000 &bull; hello@folia.example</p>
+      <iframe class="map" title="Folia store location map" loading="lazy" src="https://www.google.com/maps?q=Bengaluru&amp;output=embed"></iframe>
+    </aside>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div><p class="footer__brand">Folia</p><p>Easy-care plants, pots and decor, delivered to your door.</p></div>
+    <div><h2 class="footer__title">Explore</h2><ul class="footer__list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h2 class="footer__title">Visit us</h2><p>12 Garden Road, Bengaluru<br>Mon to Sat, 9 am to 7 pm<br>+91 90000 00000<br>hello@folia.example</p></div>
+  </div>
+  <p class="footer__copy">&copy; 2026 Folia Plants &amp; Home Decor. All rights reserved. Made with 🌿 for plant lovers.</p>
+</footer>
+<button class="back-top" id="back-top" type="button" aria-label="Back to top" hidden>&uarr;</button>
+<dialog id="quick-dialog" aria-labelledby="q-title"><div class="dialog__box"><button class="dialog__close" type="button" data-close aria-label="Close">&times;</button>
+  <h2 id="q-title"></h2><p id="q-desc"></p>
+  <ul class="facts"><li>Price: <strong id="q-price"></strong></li><li>Light: <span id="q-light"></span></li><li>Water: <span id="q-water"></span></li></ul>
+  <button class="btn btn--primary" id="q-add" type="button">Add to cart</button></div></dialog>
+<dialog id="panel-dialog" aria-labelledby="panel-title"><div class="dialog__box"><button class="dialog__close" type="button" data-close aria-label="Close">&times;</button>
+  <h2 id="panel-title"></h2><ul class="list" id="panel-list"></ul>
+  <a class="btn btn--primary" id="panel-cta" href="contact.html#plants">Send enquiry</a></div></dialog>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+.about-split-section{padding-block:2.5rem 3.5rem}
+.split{display:grid;gap:3rem;align-items:center}
+.split__media{width:100%;max-width:500px;aspect-ratio:4/3;height:auto;object-fit:cover;border-radius:var(--radius);display:block;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.split h2{font-size:clamp(1.6rem,2.8vw,2.1rem);margin-bottom:.6rem;color:var(--green)}
+.split p{font-size:1rem;line-height:1.65;margin-bottom:1rem;color:var(--ink)}
+.split p:last-child{margin-bottom:0}
+
+@media (min-width:768px){
+  .split{grid-template-columns:1fr 1fr;gap:3.5rem}
+}
+
+/* ── About Page (Viewport 2: Values & Team) ────────────────── */
+.about-values-section{padding-block:4rem 2rem;border-top:1px solid var(--line)}
+.about-values-section .section__title{margin-bottom:1.5rem}
+
+.about-team-section{padding-block:2rem 4.5rem}
+.about-team-section .section__title{margin-bottom:1.5rem}
+
+.person{text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:2rem 1.5rem;transition:transform .3s ease,box-shadow .3s ease}
+.person:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.06)}
+.person__photo{width:140px;height:140px;aspect-ratio:1;border-radius:50%;object-fit:cover;margin:0 auto 1.25rem;display:block;border:3px solid var(--sage);box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.person h3{font-size:1.25rem;margin:0 0 .25rem}.person p{margin:0 auto;color:var(--muted);font-size:.92rem}

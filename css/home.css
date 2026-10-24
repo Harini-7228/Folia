@@ -1,0 +1,49 @@
+/* ── First Viewport (Hero + Promotions Slider ONLY) ────────── */
+.hero-viewport{min-height:calc(100vh - 65px);display:flex;flex-direction:column;justify-content:space-between;box-sizing:border-box;padding-bottom:1.5rem}
+.hero{padding-block:3.25rem 2.25rem;background:linear-gradient(180deg,var(--bg) 0%,var(--surface) 100%)}
+.hero__inner{display:grid;gap:3rem;align-items:center;grid-template-columns:1fr}
+.hero__text{display:flex;flex-direction:column;align-items:flex-start}
+.hero__badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1E2421;background:var(--sage);padding:.35rem .85rem;border-radius:999px;margin-bottom:1.1rem}
+.hero__title{font-size:clamp(2.4rem,4.5vw,3.6rem);color:var(--green);line-height:1.12;letter-spacing:-.02em;margin:0 0 1rem}
+.hero__sub{font-size:1.1rem;line-height:1.6;color:var(--muted);max-width:44ch;margin:0 0 1.75rem}
+.hero__cta{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.hero__art{width:100%;height:auto;aspect-ratio:4/3;max-height:330px;object-fit:cover;border-radius:var(--radius);display:block;box-shadow:0 12px 32px rgba(0,0,0,.08)}
+
+/* ── Section Headers ──────────────────────────────────────── */
+.section__header{margin-bottom:2.25rem}
+.section__header .section__title{font-size:clamp(1.75rem,3vw,2.4rem);margin-bottom:.4rem;color:var(--green)}
+.section__sub{font-size:1rem;color:var(--muted);max-width:55ch;margin:0 auto;line-height:1.55}
+
+/* ── Category Section (Next Viewport) ─────────────────────── */
+.home-categories{padding-block:5rem 3.5rem;border-top:1px solid var(--line)}
+.cats{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.cat-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.75rem 1.25rem;text-align:center;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:.5rem;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.cat-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.07);border-color:var(--green)}
+.cat-card__icon{font-size:2.4rem;line-height:1;margin-bottom:.25rem}
+.cat-card__title{font-family:var(--serif);font-size:1.25rem;color:var(--green);margin:0}
+.cat-card__link{font-size:.85rem;font-weight:600;color:var(--muted);transition:color .2s ease}
+.cat-card:hover .cat-card__link{color:var(--green)}
+
+/* ── Gallery ──────────────────────────────────────────────── */
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+.gallery__item{margin:0;aspect-ratio:1;border-radius:var(--radius);overflow:hidden;background:var(--surface);box-shadow:0 4px 16px rgba(0,0,0,.05)}
+.gallery__item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.gallery__item:hover img{transform:scale(1.06)}
+
+@media (min-width:768px){
+  .hero__inner{grid-template-columns:1.15fr 1fr;gap:3rem}
+  .gallery{grid-template-columns:repeat(3,1fr);gap:1.25rem}
+}
+
+/* ── Dark Mode ────────────────────────────────────────────── */
+[data-theme="dark"] .hero{background:transparent}
+[data-theme="dark"] .hero__badge{background:var(--sage);color:var(--green);border:1px solid var(--line)}
+[data-theme="dark"] .hero__title{color:#fff}
+[data-theme="dark"] .home-categories{background:#16181e;border-block:1px solid var(--line)}
+[data-theme="dark"] #shop{border-top:1px solid var(--line)}
+[data-theme="dark"] .cat-card{background:var(--surface);border-color:var(--line)}
+[data-theme="dark"] .cat-card:hover{border-color:var(--green);background:#20242c}
+[data-theme="dark"] .cat-card__title{color:#fff}
+[data-theme="dark"] .cat-card__link{color:var(--muted)}
+[data-theme="dark"] .cat-card:hover .cat-card__link{color:var(--green)}
+[data-theme="dark"] .gallery__item{background:var(--surface)}

@@ -1,0 +1,19 @@
+/* Design tokens. Dark mode variables are ready for Task 2. */
+:root{--green:#1F4D3A;--sage:#A9C5A0;--bg:#F7F8F4;--ink:#1E2421;--gold:#E8B23A;--surface:#fff;--line:#dfe5da;--muted:#55635b;--radius:14px;--serif:"Fraunces",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif}
+[data-theme="dark"]{--bg:#121316;--ink:#f1f3f5;--surface:#1a1c22;--line:#2c2f38;--muted:#9ba3af;--green:#52c488;--sage:#1e2d24;--gold:#f59e0b}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);line-height:1.6;color:var(--ink);background:var(--bg)}
+h1,h2,h3{font-family:var(--serif);line-height:1.2;margin:0 0 .5em}
+p{margin:0 0 1em;max-width:70ch}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.container{width:min(1120px,100% - 2rem);margin-inline:auto}
+.section{padding-block:3rem}
+.section__title{font-size:clamp(1.5rem,3vw,2rem);color:var(--green)}
+.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;background:var(--gold);padding:.5rem 1rem;z-index:10}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.text-center{text-align:center}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Folia | Indoor plants &amp; home decor online</title>
+  <meta name="description" content="Shop easy-care indoor plants, pots and home decor from Folia, delivered to your door.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <meta name="author" content="Folia">
+  <meta name="keywords" content="indoor plants, home decor, pots, planters, plant care, buy plants online">
+  <meta name="theme-color" content="#1F4D3A">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Folia">
+  <meta property="og:title" content="Folia | Indoor plants &amp; home decor online">
+  <meta property="og:description" content="Shop easy-care indoor plants, pots and home decor from Folia, delivered to your door.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Folia home"><span class="logo__name">Folia</span><span class="logo__sub">Plants &amp; home decor</span></a>
+    <nav class="nav" id="nav" aria-label="Main navigation"><ul class="nav__list"><li><a class="nav__link nav__link--active" href="index.html" aria-current="page">Home</a></li><li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link" href="services.html">Services</a></li><li><a class="nav__link" href="contact.html">Contact</a></li><li><a class="nav__link" href="weather.html">Plant weather</a></li><li><a class="nav__link" href="todo.html">Reminders</a></li></ul></nav>
+    <div class="header__actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode">Dark</button>
+      <button class="icon-btn" id="wishlist-btn" type="button" aria-label="Wishlist">Wishlist <span class="badge" id="wishlist-count">0</span></button>
+      <button class="icon-btn" id="cart-btn" type="button" aria-label="Cart">Cart <span class="badge" id="cart-count">0</span></button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <div class="hero-viewport">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="hero__badge">🌿 Sustainable indoor greenery</span>
+          <h1 class="hero__title">Bring your home <br>to life.</h1>
+          <p class="hero__sub">Curated easy-care plants, handcrafted pots and home decor — delivered safely to your door.</p>
+          <div class="hero__cta"><a class="btn btn--primary" href="#shop">Shop plants</a><a class="btn btn--ghost" href="services.html">Get care tips</a></div>
+        </div>
+        <img class="hero__art" src="assets/images/hero.jpg" alt="Indoor plants and aesthetic home decor" width="600" height="400">
+      </div>
+    </section>
+    <section class="container slider" data-slider aria-label="Promotions">
+      <div class="slider__viewport"><div class="slider__track"><div class="slide" style="--tint:#3f6b4f"><h2>Free delivery above &#8377;999</h2><p>Order this week and your plants ship in recycled packaging.</p></div><div class="slide" style="--tint:#8a6a3a"><h2>New: pot and soil bundles</h2><p>Everything for one plant, ready for your shelf.</p></div><div class="slide" style="--tint:#2b5a44"><h2>Get a plant care card free</h2><p>Light, water and troubleshooting on one page.</p></div></div></div>
+      <button class="slider__btn slider__btn--prev" type="button" aria-label="Previous slide">&lsaquo;</button>
+      <button class="slider__btn slider__btn--next" type="button" aria-label="Next slide">&rsaquo;</button>
+      <div class="slider__dots"></div>
+    </section>
+  </div>
+
+  <section class="home-categories section container" aria-labelledby="cat-title">
+    <div class="section__header text-center">
+      <h2 id="cat-title" class="section__title">Shop by category</h2>
+      <p class="section__sub">Browse our curated collection of indoor greenery, handcrafted planters, and living decor.</p>
+    </div>
+    <div class="cats">
+      <a class="cat-card" href="#shop">
+        <span class="cat-card__icon" aria-hidden="true">🌿</span>
+        <h3 class="cat-card__title">Indoor Plants</h3>
+        <span class="cat-card__link">Explore plants &rarr;</span>
+      </a>
+      <a class="cat-card" href="#shop">
+        <span class="cat-card__icon" aria-hidden="true">🪴</span>
+        <h3 class="cat-card__title">Succulents</h3>
+        <span class="cat-card__link">Explore succulents &rarr;</span>
+      </a>
+      <a class="cat-card" href="#shop">
+        <span class="cat-card__icon" aria-hidden="true">🏺</span>
+        <h3 class="cat-card__title">Pots &amp; Planters</h3>
+        <span class="cat-card__link">Explore pots &rarr;</span>
+      </a>
+      <a class="cat-card" href="#shop">
+        <span class="cat-card__icon" aria-hidden="true">✨</span>
+        <h3 class="cat-card__title">Home Decor</h3>
+        <span class="cat-card__link">Explore decor &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section container" id="shop" aria-labelledby="feat-title">
+    <div class="section__header text-center">
+      <h2 id="feat-title" class="section__title">Featured this week</h2>
+      <p class="section__sub">Bestselling indoor plants and decor favorites for beginners and plant enthusiasts.</p>
+    </div>
+    <div class="grid grid--3">
+      <article class="product" data-id="snake-plant" data-name="Snake plant" data-price="499" data-light="Low to bright indirect light" data-water="Every 2 weeks" data-desc="Tough and forgiving, ideal for beginners.">
+        <button class="product__wish" type="button" data-action="wish" aria-label="Add Snake plant to wishlist">&#9825;</button>
+        <img class="product__media" src="assets/images/snake-plant.jpg" alt="Snake plant in a pot" loading="lazy" width="400" height="300">
+        <div class="product__body">
+          <p class="product__cat">Indoor plant</p>
+          <h3 class="product__name">Snake plant</h3>
+          <div class="product__meta"><span class="product__price">&#8377;499</span><span class="tag">Easy care</span></div>
+          <div class="product__actions">
+            <button class="btn btn--ghost" type="button" data-action="view">Quick view</button>
+            <button class="btn btn--primary" type="button" data-action="cart">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="product" data-id="money-plant" data-name="Money plant" data-price="299" data-light="Bright indirect light" data-water="Once a week" data-desc="Fast-growing vine that also grows in water.">
+        <button class="product__wish" type="button" data-action="wish" aria-label="Add Money plant to wishlist">&#9825;</button>
+        <img class="product__media" src="assets/images/money-plant.jpg" alt="Money plant in a pot" loading="lazy" width="400" height="300">
+        <div class="product__body">
+          <p class="product__cat">Indoor plant</p>
+          <h3 class="product__name">Money plant</h3>
+          <div class="product__meta"><span class="product__price">&#8377;299</span><span class="tag">Easy care</span></div>
+          <div class="product__actions">
+            <button class="btn btn--ghost" type="button" data-action="view">Quick view</button>
+            <button class="btn btn--primary" type="button" data-action="cart">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="product" data-id="monstera" data-name="Monstera" data-price="899" data-light="Bright indirect light" data-water="Once a week" data-desc="Bold split leaves for a statement corner.">
+        <button class="product__wish" type="button" data-action="wish" aria-label="Add Monstera to wishlist">&#9825;</button>
+        <img class="product__media" src="assets/images/monstera.jpg" alt="Monstera plant with split leaves" loading="lazy" width="400" height="300">
+        <div class="product__body">
+          <p class="product__cat">Indoor plant</p>
+          <h3 class="product__name">Monstera</h3>
+          <div class="product__meta"><span class="product__price">&#8377;899</span><span class="tag">Medium care</span></div>
+          <div class="product__actions">
+            <button class="btn btn--ghost" type="button" data-action="view">Quick view</button>
+            <button class="btn btn--primary" type="button" data-action="cart">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="product" data-id="jade-plant" data-name="Jade plant" data-price="349" data-light="Bright light, some direct sun" data-water="Every 2 weeks" data-desc="A compact succulent that stores water in its leaves.">
+        <button class="product__wish" type="button" data-action="wish" aria-label="Add Jade plant to wishlist">&#9825;</button>
+        <img class="product__media" src="assets/images/jade-plant.jpg" alt="Jade plant succulent" loading="lazy" width="400" height="300">
+        <div class="product__body">
+          <p class="product__cat">Succulent</p>
+          <h3 class="product__name">Jade plant</h3>
+          <div class="product__meta"><span class="product__price">&#8377;349</span><span class="tag">Easy care</span></div>
+          <div class="product__actions">
+            <button class="btn btn--ghost" type="button" data-action="view">Quick view</button>
+            <button class="btn btn--primary" type="button" data-action="cart">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="product" data-id="ceramic-pot" data-name="Ceramic pot" data-price="399" data-light="Not needed" data-water="Not needed" data-desc="Glazed ceramic pot with a drainage hole.">
+        <button class="product__wish" type="button" data-action="wish" aria-label="Add Ceramic pot to wishlist">&#9825;</button>
+        <img class="product__media" src="assets/images/ceramic-pot.jpg" alt="Glazed ceramic pot" loading="lazy" width="400" height="300">
+        <div class="product__body">
+          <p class="product__cat">Pots &amp; planters</p>
+          <h3 class="product__name">Ceramic pot</h3>
+          <div class="product__meta"><span class="product__price">&#8377;399</span><span class="tag">Decor</span></div>
+          <div class="product__actions">
+            <button class="btn btn--ghost" type="button" data-action="view">Quick view</button>
+            <button class="btn btn--primary" type="button" data-action="cart">Add to cart</button>
+          </div>
+        </div>
+      </article>
+      <article class="product" data-id="stone-vase" data-name="Stone vase" data-price="549" data-light="Not needed" data-water="Not needed" data-desc="Hand-finished stone vase for dried stems or flowers.">
+        <button class="product__wish" type="button" data-action="wish" aria-label="Add Stone vase to wishlist">&#9825;</button>
+        <img class="product__media" src="assets/images/stone-vase.jpg" alt="Hand-finished stone vase" loading="lazy" width="400" height="300">
+        <div class="product__body">
+          <p class="product__cat">Home decor</p>
+          <h3 class="product__name">Stone vase</h3>
+          <div class="product__meta"><span class="product__price">&#8377;549</span><span class="tag">Decor</span></div>
+          <div class="product__actions">
+            <button class="btn btn--ghost" type="button" data-action="view">Quick view</button>
+            <button class="btn btn--primary" type="button" data-action="cart">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="band"><div class="container">
+    <ul class="stats">
+      <li><span class="stats__num" data-count="5000">5,000+</span> happy customers</li>
+      <li><span class="stats__num" data-count="200">200+</span> plant varieties</li>
+      <li><span class="stats__num" data-count="50">50+</span> cities delivered</li>
+    </ul>
+  </div></section>
+  <section class="section container" aria-labelledby="gal-title">
+    <div class="section__header text-center">
+      <h2 id="gal-title" class="section__title">Plants in real homes</h2>
+      <p class="section__sub">Inspiration from plant lovers across the country. Tag @foliahome to be featured.</p>
+    </div>
+    <div class="gallery">
+      <figure class="gallery__item"><img src="assets/images/gallery-1.jpg" alt="Plant in stylish room" loading="lazy" width="400" height="400"></figure>
+      <figure class="gallery__item"><img src="assets/images/gallery-2.jpg" alt="Ceramic pot on wooden surface" loading="lazy" width="400" height="400"></figure>
+      <figure class="gallery__item"><img src="assets/images/gallery-3.jpg" alt="Green indoor foliage" loading="lazy" width="400" height="400"></figure>
+      <figure class="gallery__item"><img src="assets/images/gallery-4.jpg" alt="Potted plant decor" loading="lazy" width="400" height="400"></figure>
+      <figure class="gallery__item"><img src="assets/images/gallery-5.jpg" alt="Monstera plant in home" loading="lazy" width="400" height="400"></figure>
+      <figure class="gallery__item"><img src="assets/images/gallery-6.jpg" alt="Sunlit plants collection" loading="lazy" width="400" height="400"></figure>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div><p class="footer__brand">Folia</p><p>Easy-care plants, pots and decor, delivered to your door.</p></div>
+    <div><h2 class="footer__title">Explore</h2><ul class="footer__list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h2 class="footer__title">Visit us</h2><p>12 Garden Road, Bengaluru<br>Mon to Sat, 9 am to 7 pm<br>+91 90000 00000<br>hello@folia.example</p></div>
+  </div>
+  <p class="footer__copy">&copy; 2026 Folia Plants &amp; Home Decor. All rights reserved. Made with 🌿 for plant lovers.</p>
+</footer>
+<button class="back-top" id="back-top" type="button" aria-label="Back to top" hidden>&uarr;</button>
+<dialog id="quick-dialog" aria-labelledby="q-title"><div class="dialog__box"><button class="dialog__close" type="button" data-close aria-label="Close">&times;</button>
+  <h2 id="q-title"></h2><p id="q-desc"></p>
+  <ul class="facts"><li>Price: <strong id="q-price"></strong></li><li>Light: <span id="q-light"></span></li><li>Water: <span id="q-water"></span></li></ul>
+  <button class="btn btn--primary" id="q-add" type="button">Add to cart</button></div></dialog>
+<dialog id="panel-dialog" aria-labelledby="panel-title"><div class="dialog__box"><button class="dialog__close" type="button" data-close aria-label="Close">&times;</button>
+  <h2 id="panel-title"></h2><ul class="list" id="panel-list"></ul>
+  <a class="btn btn--primary" id="panel-cta" href="contact.html#plants">Send enquiry</a></div></dialog>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

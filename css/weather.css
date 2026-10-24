@@ -1,0 +1,82 @@
+
+/* ── Live Weather Section (Clean First Viewport) ──────────── */
+.weather-live-section{padding-block:1.25rem 3.5rem;min-height:calc(100vh - 240px);display:flex;flex-direction:column;justify-content:flex-start}
+.weather__form{margin-bottom:1rem}
+.weather__search-wrap{display:flex;align-items:center;gap:.4rem;background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:.35rem .35rem .35rem 1.1rem;box-shadow:0 3px 14px rgba(0,0,0,.06);transition:border-color .2s,box-shadow .2s;max-width:620px;margin-inline:auto}
+.weather__search-wrap:focus-within{border-color:var(--green);box-shadow:0 3px 16px rgba(31,77,58,.15)}
+.weather__search-icon{font-size:1.1rem;flex-shrink:0}
+.weather__search-input{flex:1;border:none;background:transparent;font:inherit;font-size:.95rem;color:var(--ink);outline:none;padding:.2rem .4rem}
+.weather__search-input::placeholder{color:var(--muted)}
+.weather__search-btn{flex-shrink:0;border-radius:999px;padding:.5rem 1.25rem;font-size:.9rem}
+
+/* ── Status & Alert Box ──────────────────────────────────── */
+.weather__msg-container{max-width:620px;margin:0 auto 1.2rem;animation:alertFadeIn .25s ease-out}
+@keyframes alertFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+.weather-alert{display:flex;align-items:flex-start;gap:.9rem;padding:.9rem 1.2rem;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);box-shadow:0 3px 12px rgba(0,0,0,.04);text-align:left}
+.weather-alert--error{background:#fff8f8;border-color:#fed7d7;border-left:4px solid #e53e3e}
+.weather-alert--warning{background:#fefbf3;border-color:#feebc8;border-left:4px solid #dd6b20}
+.weather-alert--loading{background:#f3f7f4;border-color:#c6dfd0;border-left:4px solid var(--green);align-items:center;padding:.75rem 1.2rem}
+
+.weather-alert__icon-badge{width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;font-size:1.1rem;flex-shrink:0;background:rgba(0,0,0,.05)}
+.weather-alert--error .weather-alert__icon-badge{background:rgba(229,62,62,.1)}
+.weather-alert--warning .weather-alert__icon-badge{background:rgba(221,107,32,.1)}
+
+.weather-alert__body{flex:1;min-width:0}
+.weather-alert__title{font-size:.98rem;font-weight:700;color:var(--ink);margin:0 0 .2rem;font-family:var(--sans)}
+.weather-alert__desc{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.weather-alert__desc strong{color:var(--ink)}
+.weather-alert__desc code{background:rgba(0,0,0,.06);padding:.1rem .35rem;border-radius:4px;font-size:.85rem;color:var(--ink)}
+
+.weather-alert__spinner{width:20px;height:20px;border:2.5px solid rgba(31,77,58,.2);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.weather-alert__suggestions{margin-top:.6rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.weather-alert__suggestions-label{font-size:.78rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--muted)}
+.weather-chips{display:flex;flex-wrap:wrap;gap:.35rem}
+.weather-chip{border:1px solid var(--line);background:var(--surface);color:var(--green);font-size:.8rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;cursor:pointer;font-family:inherit;transition:all .2s ease;display:inline-flex;align-items:center}
+.weather-chip:hover{background:var(--green);color:#fff;border-color:var(--green);transform:translateY(-1px);box-shadow:0 2px 6px rgba(31,77,58,.2)}
+
+/* ── Result Card ─────────────────────────────────────────── */
+.weather__card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.06);max-width:620px;margin:0 auto;animation:slideUp .35s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+.weather__card-top{background:linear-gradient(135deg,#1F4D3A,#3d8a6a);padding:1.1rem 1.4rem;color:#fff}
+.weather__location{display:flex;align-items:center;gap:1rem}
+.weather__icon-img{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.15);padding:.2rem;object-fit:contain}
+.weather__city{font-family:var(--serif);font-size:1.45rem;color:#fff;margin:0 0 .15rem}
+.weather__condition{margin:0;font-size:.92rem;color:rgba(255,255,255,.8);text-transform:capitalize}
+
+.weather__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid var(--line)}
+.weather__stat{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;padding:1rem .75rem;text-align:center;border-right:1px solid var(--line)}
+.weather__stat:last-child{border-right:none}
+.weather__stat-icon{font-size:1.25rem}
+.weather__num{font-family:var(--serif);font-size:1.55rem;font-weight:700;color:var(--green);line-height:1}
+.weather__stat-label{font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+
+.weather__tip-wrap{padding:1rem 1.4rem;display:flex;flex-direction:column;gap:.35rem}
+.weather__tip-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.75rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#1E2421;background:var(--sage);padding:.25rem .7rem;border-radius:999px;width:fit-content}
+.weather__tip{font-size:.95rem;line-height:1.5;color:var(--ink);margin:0}
+
+/* ── General Watering Guide (Next Viewport Section) ───────── */
+.weather__guide-section{padding-block:5rem 4rem;background:var(--surface);border-top:1px solid var(--line)}
+.weather__guide-header{text-align:center;margin-bottom:2.5rem}
+.weather__guide-header .section__title{font-size:clamp(1.6rem,2.8vw,2.2rem);margin:0 auto .5rem;color:var(--green);text-align:center}
+.weather__guide-sub{font-size:1rem;color:var(--muted);max-width:55ch;margin:0 auto;text-align:center}
+.weather__guide-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;transition:transform .25s ease,box-shadow .25s ease}
+.weather__guide-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.07)}
+.weather__guide-icon{display:block;font-size:2.4rem;margin-bottom:.75rem}
+.weather__guide-card h3{font-family:var(--serif);font-size:1.2rem;color:var(--green);margin:0 0 .5rem}
+.weather__guide-card p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.55}
+
+/* ── Dark mode ──────────────────────────────────────────── */
+[data-theme="dark"] .weather__search-wrap{background:var(--surface);border-color:var(--line)}
+[data-theme="dark"] .weather-alert{background:var(--surface);border-color:var(--line)}
+[data-theme="dark"] .weather-alert--error{background:rgba(229,62,62,.1);border-color:rgba(229,62,62,.3);border-left-color:#f56565}
+[data-theme="dark"] .weather-alert--warning{background:rgba(221,107,32,.1);border-color:rgba(221,107,32,.3);border-left-color:#ed8936}
+[data-theme="dark"] .weather-alert--loading{background:rgba(169,197,160,.1);border-color:rgba(169,197,160,.25);border-left-color:var(--green)}
+[data-theme="dark"] .weather-chip{background:var(--surface);border-color:var(--line);color:var(--green)}
+[data-theme="dark"] .weather-chip:hover{background:var(--green);color:#121a16}
+[data-theme="dark"] .weather__card{box-shadow:0 8px 32px rgba(0,0,0,.3)}
+[data-theme="dark"] .weather__guide-section{background:var(--surface);border-color:var(--line)}
+[data-theme="dark"] .weather__guide-card{background:var(--bg)}

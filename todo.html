@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant care reminders | Folia</title>
+  <meta name="description" content="Keep a simple list of watering, repotting and shopping reminders for your plants.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/todo.css">
+  <meta name="author" content="Folia">
+  <meta name="keywords" content="indoor plants, home decor, pots, planters, plant care, buy plants online">
+  <meta name="theme-color" content="#1F4D3A">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Folia">
+  <meta property="og:title" content="Plant care reminders | Folia">
+  <meta property="og:description" content="Keep a simple list of watering, repotting and shopping reminders for your plants.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="Folia home"><span class="logo__name">Folia</span><span class="logo__sub">Plants &amp; home decor</span></a>
+    <nav class="nav" id="nav" aria-label="Main navigation"><ul class="nav__list"><li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="about.html">About</a></li><li><a class="nav__link" href="services.html">Services</a></li><li><a class="nav__link" href="contact.html">Contact</a></li><li><a class="nav__link" href="weather.html">Plant weather</a></li><li><a class="nav__link nav__link--active" href="todo.html" aria-current="page">Reminders</a></li></ul></nav>
+    <div class="header__actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode">Dark</button>
+      <button class="icon-btn" id="wishlist-btn" type="button" aria-label="Wishlist">Wishlist <span class="badge" id="wishlist-count">0</span></button>
+      <button class="icon-btn" id="cart-btn" type="button" aria-label="Cart">Cart <span class="badge" id="cart-count">0</span></button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero"><div class="container"><h1>Plant care reminders</h1><p>Keep track of watering, repotting and shopping for your plants.</p></div></section>
+  <section class="section container todo">
+    <form id="todo-form" class="todo__form">
+      <label class="sr-only" for="todo-input">New reminder</label>
+      <input id="todo-input" type="text" maxlength="80" placeholder="For example: Water the monstera" required>
+      <button class="btn btn--primary" type="submit">Add reminder</button>
+    </form>
+    <div class="todo__filters" role="group" aria-label="Filter reminders">
+      <button class="btn btn--ghost is-active" type="button" data-filter="all">All</button>
+      <button class="btn btn--ghost" type="button" data-filter="active">Active</button>
+      <button class="btn btn--ghost" type="button" data-filter="done">Completed</button>
+      <p class="todo__count" id="todo-count" aria-live="polite"></p>
+    </div>
+    <ul id="todo-list" class="todo__list"></ul>
+    <p id="todo-empty">No reminders here yet. Add your first one above.</p>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div><p class="footer__brand">Folia</p><p>Easy-care plants, pots and decor, delivered to your door.</p></div>
+    <div><h2 class="footer__title">Explore</h2><ul class="footer__list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h2 class="footer__title">Visit us</h2><p>12 Garden Road, Bengaluru<br>Mon to Sat, 9 am to 7 pm<br>+91 90000 00000<br>hello@folia.example</p></div>
+  </div>
+  <p class="footer__copy">&copy; 2026 Folia Plants &amp; Home Decor. All rights reserved. Made with 🌿 for plant lovers.</p>
+</footer>
+<button class="back-top" id="back-top" type="button" aria-label="Back to top" hidden>&uarr;</button>
+<dialog id="quick-dialog" aria-labelledby="q-title"><div class="dialog__box"><button class="dialog__close" type="button" data-close aria-label="Close">&times;</button>
+  <h2 id="q-title"></h2><p id="q-desc"></p>
+  <ul class="facts"><li>Price: <strong id="q-price"></strong></li><li>Light: <span id="q-light"></span></li><li>Water: <span id="q-water"></span></li></ul>
+  <button class="btn btn--primary" id="q-add" type="button">Add to cart</button></div></dialog>
+<dialog id="panel-dialog" aria-labelledby="panel-title"><div class="dialog__box"><button class="dialog__close" type="button" data-close aria-label="Close">&times;</button>
+  <h2 id="panel-title"></h2><ul class="list" id="panel-list"></ul>
+  <a class="btn btn--primary" id="panel-cta" href="contact.html#plants">Send enquiry</a></div></dialog>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
